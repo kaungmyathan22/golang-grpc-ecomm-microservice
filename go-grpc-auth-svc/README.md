@@ -1,0 +1,1 @@
+## Golang microservice auth service
