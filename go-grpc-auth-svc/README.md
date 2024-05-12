@@ -1,1 +1,1 @@
-## Golang microservice auth service
+## Golang microservice project auth service
