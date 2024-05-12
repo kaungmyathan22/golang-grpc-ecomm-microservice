@@ -1,1 +1,1 @@
-psql -h localhost -d postgres -U admin -W
+psql -h localhost -d order_svc -U admin -W
