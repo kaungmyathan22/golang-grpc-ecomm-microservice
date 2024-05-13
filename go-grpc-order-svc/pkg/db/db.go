@@ -1,7 +1,6 @@
 package db
 
 import (
-	"fmt"
 	"log"
 
 	"github.com/kaungmyathan22/golang-grpc-order-svc/pkg/models"
@@ -14,7 +13,6 @@ type Handler struct {
 }
 
 func Init(url string) Handler {
-	fmt.Println(url)
 	db, err := gorm.Open(postgres.Open(url), &gorm.Config{})
 
 	if err != nil {

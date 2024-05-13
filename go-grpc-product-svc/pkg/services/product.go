@@ -15,7 +15,6 @@ type Server struct {
 
 func (s *Server) CreateProduct(ctx context.Context, req *pb.CreateProductRequest) (*pb.CreateProductResponse, error) {
 	var product models.Product
-
 	product.Name = req.Name
 	product.Stock = req.Stock
 	product.Price = req.Price

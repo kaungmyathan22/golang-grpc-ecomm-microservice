@@ -26,7 +26,6 @@ func main() {
 	if err != nil {
 		log.Fatalln("Failed to listing:", err)
 	}
-
 	fmt.Println("Product Svc on", c.Port)
 
 	s := services.Server{
