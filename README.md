@@ -24,8 +24,8 @@ curl --request POST \
 - Create Product
 ```
 curl --request POST \
-  --url http://localhost:3000/product \
-  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDcwNzI5NzMsImlzcyI6ImdvLWdycGMtYXV0aC1zdmMiLCJJZCI6MSwiRW1haWwiOiJlbG9uQG11c2suY29tIn0.GnvcDqCygS5XCEYEVaEE0nUP7WKFOmN8sELqxh8maks' \
+  --url http://localhost:3000/product/ \
+  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDcxMjQ1NjgsImlzcyI6ImdvLWdycGMtYXV0aC1zdmMiLCJJZCI6MSwiRW1haWwiOiJlbG9uQG11c2suY29tIn0.0mY7op7Q_CHRJQklCK5kGCZiQ1QCXuKmS_wiptINFHY' \
   --header 'Content-Type: application/json' \
   --data '{
  "name": "Product A",
@@ -37,5 +37,16 @@ curl --request POST \
 ```
 curl --request GET \
   --url http://localhost:3000/product/1 \
-  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDcwNzI5NzMsImlzcyI6ImdvLWdycGMtYXV0aC1zdmMiLCJJZCI6MSwiRW1haWwiOiJlbG9uQG11c2suY29tIn0.GnvcDqCygS5XCEYEVaEE0nUP7WKFOmN8sELqxh8maks'
+  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDcxMjQ1NjgsImlzcyI6ImdvLWdycGMtYXV0aC1zdmMiLCJJZCI6MSwiRW1haWwiOiJlbG9uQG11c2suY29tIn0.0mY7op7Q_CHRJQklCK5kGCZiQ1QCXuKmS_wiptINFHY'
+```
+- Create Order
+```
+curl --request POST \
+  --url http://localhost:3000/order/ \
+  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDcxMjQ1NjgsImlzcyI6ImdvLWdycGMtYXV0aC1zdmMiLCJJZCI6MSwiRW1haWwiOiJlbG9uQG11c2suY29tIn0.0mY7op7Q_CHRJQklCK5kGCZiQ1QCXuKmS_wiptINFHY' \
+  --header 'Content-Type: application/json' \
+  --data '{
+ "productId": 1,
+ "quantity": 1
+}'
 ```
